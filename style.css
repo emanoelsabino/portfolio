@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;1,300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./img/background.png);
+    background-color: #191919;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 25px;
+}
+header h2 {
+    padding-left: 35px;
+    position: fixed;
+    left: 0;
+}
+
+header nav {
+    position: fixed;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.portfolio {
+    color: white;
+    font-size: 35px;
+}
+.portfolio span {
+    color: rgb(255, 42, 42);
+}
+
+li {
+    list-style: none;    
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 8px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+li a {
+    color: white;
+    text-decoration: none;
+}
+li:hover {
+    background-color: rgb(255, 42, 42);
+    transition: 0.5s;
+    text-shadow: 2px 2px 1px #191919;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: white;
+}
+.title h1 {
+    font-size: 60px;
+}
+.title span {
+    color: rgb(255, 42, 42);
+}
+
+.sobre {
+    padding: 7% 0;
+    background-color: black;
+}
+
+.sobre-mim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 30px 0;
+}
+.sobre-mim img {
+    width: 300px;
+    border-radius: 30px;
+}
+.sobre-mim div {
+    text-align: justify;
+    margin: 40px;
+    color: white;
+    width: 600px;
+}
+.sobre-mim * {
+    margin: 10px 0;
+}
+.sobre-mim h2 {
+    font-size: 50px;
+}
+
+button {
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    background-color: rgb(255, 42, 42);
+    padding: 8px;
+    border-radius: 10px;
+}
+button:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 3px rgb(255, 42, 42);
+}
+
+.projetos {
+    padding: 10% 0;
+    background-color: #191919;
+    color: white;
+}
+.projetos h2 {
+    text-align: center;
+    padding: 35px;
+    font-size: 50px;
+}
+.projetos img {
+    width: 100px;
+}
+
+.proj {
+    margin: 0px 10px;
+    background-color: black;
+    width: 250px;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+}
+.proj h5 {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.proj button {
+    margin-top: 10px;
+}
+
+.cards-projetos {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 80px 0;
+}
+footer p {
+    padding: 15px 0;
+}
+footer img {
+    width: 50px;
+    margin: 0 5px;
+}
