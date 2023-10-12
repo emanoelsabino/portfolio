@@ -11,27 +11,57 @@
 header {
     height: 100vh;
     width: 100%;
-    background-image: url(./img/background.png);
     background-color: #191919;
-    background-size: 80%;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-top: 25px;
 }
-header h2 {
-    padding-left: 35px;
-    position: fixed;
-    left: 0;
-}
-
-header nav {
-    position: fixed;
-    right: 0;
-    display: flex;
+#nav {
+    background-color: rgba(0, 0, 0, 0.9);
     align-items: center;
     justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
+    display: flex;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+}
+#menu a {
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    background-color: rgb(255, 42, 42);
+    transition: 0.5s;
+    text-shadow: 2px 2px 1px #191919;
+}
+#btn-mobile{
+    display: none;
+}
+
+@media (max-width: 550px) {
+    #btn-mobile{
+        display: block;
+        box-shadow: none;
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+        background-color: black;
+    }
+    #menu a{
+        display: none;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+    }
+    #menu{
+        position: absolute;
+        width: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        right: 0px;
+        z-index: 999;
+    }
+
+    #nav.active #menu a{
+        display: block;
+    }
 }
 
 .portfolio {
@@ -42,29 +72,14 @@ header nav {
     color: rgb(255, 42, 42);
 }
 
-li {
-    list-style: none;    
-    display: inline-block;
-    font-size: 20px;
-    padding: 5px;
-    border-radius: 8px;
-    margin-right: 15px;
-    cursor: pointer;
-}
-li a {
-    color: white;
-    text-decoration: none;
-}
-li:hover {
-    background-color: rgb(255, 42, 42);
-    transition: 0.5s;
-    text-shadow: 2px 2px 1px #191919;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
 }
 
 .title {
-    position: absolute;
-    top: 50%;
-    left: 10%;
     color: white;
 }
 .title h1 {
@@ -73,7 +88,35 @@ li:hover {
 .title span {
     color: rgb(255, 42, 42);
 }
+@media(max-width: 500px) {
+    .title h1 {
+        font-size: 45px;
+    }
+}
+@media(max-width: 1000px) {
+    .header {
+        display: block;
+        padding: 30px 0;
+    }
+    .header img {
+        display: block;
+        margin: auto;
+        max-width: 400px;
+    }
+    .header div {
+        display: block;
+        max-width: 500px;
+        margin: auto;
+        padding-top: 100px;
+    }
+}
+@media(max-height: 600px) {
+    .header img {
+        width: 300px;
+    }
+}
 
+/* Seção sobre mim */
 .sobre {
     padding: 7% 0;
     background-color: black;
@@ -101,6 +144,29 @@ li:hover {
 }
 .sobre-mim h2 {
     font-size: 50px;
+}
+
+@media(max-width: 900px) {
+    .sobre-mim {
+        display: block;
+    }
+    .sobre-mim img {
+        display: block;
+        margin: auto;
+    }
+    .sobre-mim div {
+        display: block;
+        text-align: justify;
+        width: auto;
+        padding: 0 10%;
+    }
+    .sobre-mim button {
+        display: block;
+        margin: auto;
+    }
+    .sobre-mim a {
+        text-decoration: none;
+    }
 }
 
 button {
@@ -150,6 +216,29 @@ button:hover {
     display: flex;
     justify-content: center;
 }
+@media(max-width: 900px) {
+    .proj {
+        display: block;
+        margin: auto;
+        margin-bottom: 50px;
+        background-color: black;
+        width: 250px;
+        border-radius: 20px;
+        padding: 15px;
+        text-align: center;
+    }
+    .proj h5 {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    .proj button {
+        margin-top: 10px;
+    }
+    
+    .cards-projetos {
+        display: inline;
+    }
+}
 
 footer {
     text-align: center;
@@ -163,4 +252,27 @@ footer p {
 footer img {
     width: 50px;
     margin: 0 5px;
+}
+
+
+div#teste {
+    height: 500px;
+    text-align: center;
+    padding: 50px;
+}
+
+.desktop {
+    display: block; /* inline, inline-block */
+}
+.mobile {
+    display: none;
+}
+
+@media(max-width: 600px) {
+    .desktop{
+        display: none;
+    }
+    .mobile {
+        display: block; /* ou inline, inline-block */
+    }
 }
