@@ -143,15 +143,10 @@ a:hover {
     background-color: var(--cor-fundo-secundaria);
     padding: 30px 0;
 }
-.sobre-mim img {
-    width: 300px;
-    border-radius: 30px;
-}
 .sobre-mim div {
-    text-align: justify;
     margin: 40px;
     color: var(--cor-texto-principal);
-    width: 600px;
+    max-width: 600px;
 }
 .sobre-mim * {
     margin: 10px 0;
@@ -159,18 +154,32 @@ a:hover {
 .sobre-mim h2 {
     font-size: 50px;
 }
+/* animacao das imagens sobre mim */
+[data-anima] {
+    opacity: 0;
+    transition: 1s;
+}
+[data-anima="img-animacao"] {
+    transform: translate3d(-50px, 0px, 0px);
+}
+[data-anima].animacao {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
 
 @media(max-width: 900px) {
     .sobre-mim {
-        display: block;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .sobre-mim img {
         display: block;
         margin: auto;
     }
     .sobre-mim div {
-        display: block;
-        text-align: justify;
         width: auto;
         padding: 0 10%;
     }
@@ -207,7 +216,7 @@ button:hover {
     font-size: 50px;
 }
 .projetos img {
-    width: 100px;
+    max-width: 100px;
 }
 
 .proj {
@@ -264,8 +273,8 @@ footer p {
     padding: 15px 0;
 }
 footer img {
-    width: 50px;
-    margin: 0 5px;
+    max-width: 50px;
+    margin: 0 10px;
 }
 footer a:hover {
     background-color: var(--cor-fundo-secundaria);
