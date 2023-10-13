@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;1,300&display=swap');
 
+:root {
+    --cor-fundo-principal: #191919;
+    --cor-fundo-secundaria: #000000;
+    --cor-fundo-sec-transp: #000000dc;
+    --cor-texto-principal: #ffffff;
+    --cor-texto-secundaria: #ff1d1d;
+}
+
 
 * {
     margin: 0;
@@ -11,10 +19,10 @@
 header {
     height: 100vh;
     width: 100%;
-    background-color: #191919;
+    background-color: var(--cor-fundo-principal);
 }
 #nav {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--cor-fundo-sec-transp);
     align-items: center;
     justify-content: space-between;
     display: flex;
@@ -25,13 +33,13 @@ header {
 #menu a {
     padding: 10px 10px;
     border-radius: 10px;
-    color: white;
+    color: var(--cor-texto-principal);
     text-decoration: none;
 }
 a:hover {
-    background-color: rgb(255, 42, 42);
+    background-color: var(--cor-texto-secundaria);
     transition: 0.5s;
-    text-shadow: 2px 2px 1px #191919;
+    text-shadow: 2px 2px 1px var(--cor-fundo-principal);
 }
 #btn-mobile{
     display: none;
@@ -44,16 +52,16 @@ a:hover {
         padding: 0px;
         margin: 0px;
         border: 0px;
-        background-color: black;
+        background-color: var(--cor-fundo-secundaria);
     }
     #menu a{
         display: none;
-        border: 2px solid rgba(0, 0, 0, 0.1);
+        border: 2px solid var(--cor-fundo-sec-transp);
     }
     #menu{
         position: absolute;
         width: auto;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: var(--cor-fundo-sec-transp);
         border-radius: 10px;
         right: 0px;
         z-index: 999;
@@ -65,18 +73,20 @@ a:hover {
 }
 
 .portfolio {
-    color: white;
+    color: var(--cor-texto-principal);
     font-size: 35px;
 }
 .portfolio span {
-    color: rgb(255, 42, 42);
+    color: var(--cor-texto-secundaria);
 }
 
 .header {
-    display: flex;
     align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 40px 0;
+    height: 100vh;
 }
 
 .title {
@@ -86,7 +96,7 @@ a:hover {
     font-size: 60px;
 }
 .title span {
-    color: rgb(255, 42, 42);
+    color: var(--cor-texto-secundaria);
 }
 @media(max-width: 500px) {
     .title h1 {
@@ -95,8 +105,12 @@ a:hover {
 }
 @media(max-width: 1000px) {
     .header {
-        display: block;
-        padding: 30px 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 100vh;
     }
     .header img {
         display: block;
@@ -112,21 +126,21 @@ a:hover {
 }
 @media(max-height: 600px) {
     .header img {
-        width: 300px;
+        max-width: 300px;
     }
 }
 
 /* Seção sobre mim */
 .sobre {
     padding: 7% 0;
-    background-color: black;
+    background-color: var(--cor-fundo-secundaria);
 }
 
 .sobre-mim {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: var(--cor-fundo-secundaria);
     padding: 30px 0;
 }
 .sobre-mim img {
@@ -136,7 +150,7 @@ a:hover {
 .sobre-mim div {
     text-align: justify;
     margin: 40px;
-    color: white;
+    color: var(--cor-texto-principal);
     width: 600px;
 }
 .sobre-mim * {
@@ -170,22 +184,22 @@ a:hover {
 }
 
 button {
-    color: white;
-    text-shadow: 0px 0px 5px black;
-    background-color: rgb(255, 42, 42);
+    color: var(--cor-texto-principal);
+    text-shadow: 0px 0px 5px var(--cor-fundo-secundaria);
+    background-color: var(--cor-texto-secundaria);
     padding: 8px;
     border-radius: 10px;
 }
 button:hover {
     transition: 0.5s;
     cursor: pointer;
-    box-shadow: 0px 0px 15px 3px rgb(255, 42, 42);
+    box-shadow: 0px 0px 15px 3px var(--cor-texto-secundaria);
 }
 
 .projetos {
     padding: 10% 0;
-    background-color: #191919;
-    color: white;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
 }
 .projetos h2 {
     text-align: center;
@@ -198,7 +212,7 @@ button:hover {
 
 .proj {
     margin: 0px 10px;
-    background-color: black;
+    background-color: var(--cor-fundo-secundaria);
     width: 250px;
     border-radius: 20px;
     padding: 15px;
@@ -221,7 +235,7 @@ button:hover {
         display: block;
         margin: auto;
         margin-bottom: 50px;
-        background-color: black;
+        background-color: var(--cor-fundo-secundaria);
         width: 250px;
         border-radius: 20px;
         padding: 15px;
@@ -242,8 +256,8 @@ button:hover {
 
 footer {
     text-align: center;
-    background-color: black;
-    color: white;
+    background-color: var(--cor-fundo-secundaria);
+    color: var(--cor-texto-principal);
     padding: 80px 0;
 }
 footer p {
@@ -253,26 +267,6 @@ footer img {
     width: 50px;
     margin: 0 5px;
 }
-
-
-div#teste {
-    height: 500px;
-    text-align: center;
-    padding: 50px;
-}
-
-.desktop {
-    display: block; /* inline, inline-block */
-}
-.mobile {
-    display: none;
-}
-
-@media(max-width: 600px) {
-    .desktop{
-        display: none;
-    }
-    .mobile {
-        display: block; /* ou inline, inline-block */
-    }
+footer a:hover {
+    background-color: var(--cor-fundo-secundaria);
 }
